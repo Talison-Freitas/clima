@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,33 @@
   <title>Clima</title>
 </head>
 <body>
+  <div class="container">
+    <h1>Clima</h1>
+    <form class="form-container">
+      <input type="text" name="clima" id="clima" placeholder="Cidade, Estado ou País">
+      <button></button>
+    </form>
+    <div class="content">
+      <div class="header">
+        <h2 class="place-temp"><span class="country"></span></h2>
+        <div class="date-time"></div>
+      </div>
+      <div class="container-temp">
+        <div>
+          <div><img src="./img/nuvens.svg" alt=""></div>
+        </div>
+        <div class="temp">
+          <span></span>
+        </div>
+      </div>
+      <ul class="data-list">
+        <li>Temperatura mínima: <span></span></li>
+        <li>Temperatura máxima: <span></span></li>
+        <li>Sensação térmica: <span></span></li> 
+        <li>Umidade do ar: <span></span></li> 
+      </div>
+    </div>
+  </div>
   <script src="./javascript/script.js"></script>
 </body>
 </html>
