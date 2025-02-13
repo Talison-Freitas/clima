@@ -3,7 +3,7 @@ body {
   background: url("../img/background3.svg") no-repeat;
   background-size: cover; /* Faz a imagem ocupar toda a tela */
   background-position: center; /* Centraliza a imagem */
-  height: calc(100vh + 100px);
+  height: 110vh;
   font-family: monospace;
 }
 h1,
