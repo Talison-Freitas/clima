@@ -73,7 +73,7 @@ ul {
   width: 100%;
 }
 .container-content > div {
-  background-color: rgba(57, 142, 207, 0.686);
+  background: linear-gradient(to top left, #317bb3b9, #b0d9f894);
   padding: 20px;
   border-radius: 8px;
   color: #fff;
