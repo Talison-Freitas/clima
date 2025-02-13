@@ -1,8 +1,9 @@
-html, body {
+html,
+body {
   margin: 0;
   background: url("../img/background-sky.jpg") no-repeat;
-  background-size: cover; 
-  background-position: center; 
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   font-family: monospace;
 }
@@ -61,8 +62,9 @@ ul {
   box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.1);
 }
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 .container-content .erro {
   text-align: center;
@@ -71,7 +73,7 @@ ul {
   width: 100%;
 }
 .container-content > div {
-  background-color: #398ecfaf;
+  background-color: rgba(57, 142, 207, 0.686);
   padding: 20px;
   border-radius: 8px;
   color: #fff;
@@ -93,7 +95,9 @@ ul {
   display: block;
 }
 .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 .container-temp {
   display: grid;
@@ -128,7 +132,7 @@ ul {
   display: grid;
   font-size: 1rem;
   align-items: center;
-  width: 45%;
+  width: 100%;
 }
 .data-list li {
   display: flex;
@@ -139,12 +143,21 @@ ul {
 .data-list li span {
   font-size: 1.1rem;
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .content {
-    flex-wrap: wrap;
-    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  .container-temp .temp > div {
+    font-size: 9rem;
+    display: flex;
+    justify-content: center;
   }
   .data-list {
     flex: 1;
+  }
+}
+@media (max-width: 350px) {
+  .container-temp .temp > div {
+    font-size: 6rem;
   }
 }

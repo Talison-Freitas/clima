@@ -3,6 +3,19 @@ const inputClima = document.querySelector(".form-container input");
 const inputButton = document.querySelector(".form-container button");
 const apiKey = "a9ccf6b6079312d3e5c57cf41fd20c0d";
 
+const formataData = () => {
+  const dataAgora = new Date();
+  const formatoData = new Intl.DateTimeFormat("pt-BR", {
+    weekday: "long", 
+    year: "numeric",
+    month: "long",  
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+  const dataFormatada = formatoData.format(dataAgora)
+  return dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1);
+}
 const addClimaElement = async (event) => {
   event.preventDefault();
   try {
@@ -32,7 +45,7 @@ const criaElement = (objeto) => {
         <h2 class="place-temp">${objeto.name},<span class="country"> ${
     objeto.sys.country
   }</span></h2>
-        <div class="date-time"></div>
+        <div class="date-time">${formataData()}</div>
       </div>
       <div class="content">
         <div class="container-temp">
@@ -65,7 +78,7 @@ const addClimaEvents = () => {
   inputButton.addEventListener("click", addClimaElement);
   inputClima.addEventListener("focus", (event) => {
     event.currentTarget.parentElement.style.outline =
-      "2px solid rgb(0, 111, 122)";
+      "2px solid rgba(57, 142, 207)";
   });
   inputClima.addEventListener("blur", (event) => {
     event.currentTarget.parentElement.style.outline = "rgb(0, 0, 0) none 0px";
