@@ -49,9 +49,9 @@ const criaElement = (objeto) => {
           <div class="description">${objeto.weather[0].description}</div>
         </div>
         <ul class="data-list">
-          <li>Temperatura mínima: <span>${objeto.main.temp_min}°C</span></li>
-          <li>Temperatura máxima: <span>${objeto.main.temp_max}°C</span></li>
-          <li>Sensação térmica: <span>${objeto.main.feels_like}°C</span></li>
+          <li>Temperatura mínima: <span>${Math.floor(objeto.main.temp_min)}°C</span></li>
+          <li>Temperatura máxima: <span>${Math.floor(objeto.main.temp_max)}°C</span></li>
+          <li>Sensação térmica: <span>${Math.floor(objeto.main.feels_like)}°C</span></li>
           <li>Umidade do ar: <span>${objeto.main.humidity}%</span></li>
         </ul>
         </div>

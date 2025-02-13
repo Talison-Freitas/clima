@@ -1,6 +1,6 @@
 html, body {
   margin: 0;
-  background: url("../img/background3.svg") no-repeat;
+  background: url("../img/background-sky.jpg") no-repeat;
   background-size: cover; 
   background-position: center; 
   height: 100vh;
@@ -71,7 +71,7 @@ ul {
   width: 100%;
 }
 .container-content > div {
-  background-color: #79c6ccc9;
+  background-color: #398ecfaf;
   padding: 20px;
   border-radius: 8px;
   color: #fff;
@@ -92,10 +92,8 @@ ul {
   animation: toTop 0.5s ease-in-out;
   display: block;
 }
-
 .content {
   display: flex;
-  gap: 40px;
 }
 .container-temp {
   display: grid;
@@ -107,6 +105,9 @@ ul {
   letter-spacing: -6px;
   display: flex;
   color: #fff;
+}
+.container-temp img {
+  min-width: 120px;
 }
 .container-temp .temp .grau {
   font-size: 3.5rem;
@@ -133,7 +134,17 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: end;
+  font-size: 1.1rem;
 }
 .data-list li span {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+@media (max-width: 500px) {
+  .content {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .data-list {
+    flex: 1;
+  }
 }
