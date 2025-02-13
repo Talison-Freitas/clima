@@ -1,9 +1,9 @@
-body {
+html, body {
   margin: 0;
   background: url("../img/background3.svg") no-repeat;
-  background-size: cover; /* Faz a imagem ocupar toda a tela */
-  background-position: center; /* Centraliza a imagem */
-  height: 110vh;
+  background-size: cover; 
+  background-position: center; 
+  height: 100vh;
   font-family: monospace;
 }
 h1,
@@ -31,10 +31,10 @@ ul {
 .container {
   max-width: 600px;
   width: 100%;
-  padding: 0 20px;
   margin: 0 auto;
   padding: 100px 20px 0 20px;
   text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 .container h1 {
   text-align: center;
